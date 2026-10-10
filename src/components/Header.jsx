@@ -5,7 +5,7 @@ import styles from "../ui/HeaderCard.module.scss";
 function Header() {
   return (
     <header className={styles.container}>
-      <h2>Categories</h2>
+      <h2 className={styles.heading}>Categories</h2>
 
       <div className={styles.cards}>
         {categories.map((item) => (

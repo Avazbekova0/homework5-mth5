@@ -1,5 +1,4 @@
-import React from "react";
-import styles from "./HeaderCard.module.scss";
+import styles from "./MainCard.module.scss";
 
 const MainCard = ({
   id,
@@ -13,38 +12,34 @@ const MainCard = ({
 }) => {
   return (
     <div
-      className={`${styles.main_card} ${
-        id === 6 ? styles.main_salad : ""
+      className={`${styles.card} ${
+        id === 6 ? styles.salad : ""
       }`}
       style={{ background: bg }}
     >
-      <div className={styles.main_image_wrapper}>
-        <img
-          className={styles.main_product}
-          src={image}
-          alt={title}
-        />
+      <div className={styles.image_wrapper}>
+        <img className={styles.image} src={image} alt={title} />
 
         {id !== 6 && (
           <img
-            className={styles.main_favorite}
+            className={styles.favorite}
             src={selected}
             alt="Favorite"
           />
         )}
       </div>
 
-      <h3 className={styles.main_title}>{title}</h3>
+      <h3 className={styles.title}>{title}</h3>
 
       {id !== 6 && (
-        <div className={styles.main_info}>
-          <div className={styles.main_item}>
+        <div className={styles.info}>
+          <div className={styles.item}>
             <img src={timer} alt="Timer" />
             <p>30 Minutes</p>
           </div>
 
-          <div className={styles.main_item}>
-            <img src={fork} alt="ForkKnife" />
+          <div className={styles.item}>
+            <img src={fork} alt="Fork and knife" />
             <p>{type}</p>
           </div>
         </div>

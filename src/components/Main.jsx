@@ -1,21 +1,22 @@
 import React from "react";
 import { paskeds } from "../units/unit";
 import MainCard from "../ui/MainCard";
-import styles from "../ui/HeaderCard.module.scss";
+import styles from "../ui/MainCard.module.scss";
 
 const Main = () => {
   return (
     <main className={styles.container}>
-      <div className={styles.main_header}>
+      <div className={styles.header}>
         <h1>Simple and tasty recipes</h1>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqut enim ad minim
+          Lorem ipsum dolor sit amet, consectetuipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqut enim ad minim
         </p>
       </div>
 
-      <div className={styles.main_cards}>
+      <div className={styles.cards}>
         {paskeds.map((item) => (
           <MainCard
             key={item.id}

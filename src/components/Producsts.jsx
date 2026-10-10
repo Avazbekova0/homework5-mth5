@@ -1,12 +1,12 @@
 import React from "react";
 import { products } from "../units/unit";
 import ProductsCard from "../ui/ProductsCard";
-import styles from "../ui/HeaderCard.module.scss";
+import styles from "../ui/ProductsCard.module.scss";
 
 const Products = () => {
   return (
-    <section className={styles.products_container}>
-      <div className={styles.products_header}>
+    <section className={styles.container}>
+      <div className={styles.header}>
         <h1>
           Try this delicious recipe
           <br />
@@ -14,7 +14,7 @@ const Products = () => {
         </h1>
       </div>
 
-      <div className={styles.products_grid}>
+      <div className={styles.cards}>
         {products.map((item) => (
           <ProductsCard
             key={item.id}
